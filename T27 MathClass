@@ -1,0 +1,38 @@
+//Java Math Class search in google Hints from Oracle 
+
+//https://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+
+package java_Tutorial;
+
+public class T27_MathClass {
+    
+    public static void main(String[] args) {
+        int a=10; int b=50;
+        
+        int max= Math.max(a , b);//Math class use kore max value
+        System.out.println("max : "+max);
+        
+        
+        int min= Math.min(a , b);//Math class use kore min value
+        System.out.println("min : "+min);
+        
+        
+        int y=-100;
+        
+        int abs=Math.abs(y);
+        System.out.println("Absoulate value : "+abs);
+        
+        
+        int c=3;
+        double pow=Math.pow(a,c);
+        System.out.println("Power of a and b : "+pow);
+        
+        int round=Math.round(8.5f);
+        System.out.println("Round value of 8.5f : "+round);
+        
+        double pi=Math.PI;
+        System.out.println("PI = "+pi);
+        double E=Math.E;
+        System.out.println("E = "+E);
+    }
+}
