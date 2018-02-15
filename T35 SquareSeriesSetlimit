@@ -1,0 +1,20 @@
+
+package java_Tutorial;
+
+import java.util.Scanner;
+
+public class T35_Square_series {
+    public static void main(String[] args) {
+        int i,sum=0,n;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the limit of your series : ");
+       n = input.nextInt();
+       for(i=1;i<=n;i=i+1)
+       {
+           sum=sum+i*i;
+           System.out.println(i+"^"+i);
+       }
+        System.out.println("Sum : "+sum);
+    }
+    
+}
