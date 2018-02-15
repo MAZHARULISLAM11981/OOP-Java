@@ -1,0 +1,42 @@
+//Sum of all even and odd number
+package java_Tutorial;
+
+
+import java.util.Scanner;
+
+public class T34_sumOf_even_and_odd_number {
+    public static void main(String[] args) {
+
+    int x,y,i,sum=0;
+    Scanner input = new Scanner(System.in);
+        System.out.print("Enter initial Number : ");
+     x = input.nextInt();
+     System.out.print("Enter final Number : ");
+     y = input.nextInt();
+     
+     for(i=x;i<=y;i=i+2)
+     {
+         if(i%2==0)
+         {
+         sum=sum+i;
+             System.out.println("  "+i);
+         }
+     }
+        System.out.println("Sum of all even number : "+sum);
+//Input odd number for showing output
+int q,r,total = 0;
+        System.out.print("Enter initial Number : ");
+     q = input.nextInt();
+     System.out.print("Enter final Number : ");
+     r = input.nextInt();
+     for(i=q;i<=r;i=i+2)
+     {
+         if(i%2==1)
+         {
+         total=total+i;
+         System.out.println(" "+i);
+         }
+     }
+        System.out.println("Sum of all odd Number : "+total);
+    }
+}
