@@ -1,0 +1,136 @@
+// Log In Frame
+package Java_Swing_Tutorial;
+
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class T40_LogIn_Frame extends JFrame {
+    //Decleare All Statement For Use in javaframe
+    
+    private JLabel userLabel,passLabel;
+    private JTextField tf;
+    private JPasswordField pf;
+    private JButton loginButton,clearButton;
+    private Container c;
+    private Font f;
+    
+    T40_LogIn_Frame()
+       {
+         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         this.setBounds(100,50,550,400);
+         this.setTitle("Log In Page ");
+         
+         c=this.getContentPane();// JFrame put in container(C)
+         c.setBackground(Color.GRAY);//Background Color
+         c.setLayout(null);
+         
+         f = new Font("Arial",Font.BOLD,18);//font size in Box maximize and minimize
+         
+         userLabel = new JLabel("User Name : ");
+         userLabel.setBounds(60,50,200,50);
+         userLabel.setFont(f);
+         c.add(userLabel);
+         
+         tf = new JTextField();
+         tf.setFont(f);
+         tf.setBounds(170,50,250,50);//left to move,top to move,button width,button hight
+         c.add(tf);
+         
+         passLabel = new JLabel("Password : ");
+         passLabel.setBounds(60,115,200,50);//Left to 50pxl,Top to 120pxl,width box,hieght box;
+         passLabel.setFont(f);
+         c.add(passLabel);
+         
+         pf = new JPasswordField();
+         pf.setBounds(170,120,250,50);
+         pf.setEchoChar('*');
+         pf.setFont(f);
+         c.add(pf);
+         
+         loginButton = new JButton("Log In");
+         loginButton.setBounds(170,190,100,50);//left to move,top to move,button width,button hight
+         loginButton.setFont(f);
+         c.add(loginButton);
+         
+           clearButton = new JButton("Clear");
+         clearButton.setBounds(300,190,100,50);//left to move,top to move,button width,button hight
+         clearButton.setFont(f);
+         c.add(clearButton);
+         
+         // Action Button add with Clear Button
+         clearButton.addActionListener(new ActionListener(){
+
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                tf.setText("");
+                pf.setText("");
+             }
+             
+             
+         });
+         //Action Button add with LogIn Button
+         
+            loginButton.addActionListener(new ActionListener(){
+
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                String userName = tf.getText();
+                String password = pf.getText();
+                if(userName.equals("MMIB SHOWROV") && password.equals("123"))
+                {
+                    JOptionPane.showMessageDialog(null,"You are Successfully Log In..... ");
+                     ImageIcon  fokla = new ImageIcon("guiter.PNG");
+           JOptionPane.showMessageDialog(null, "  Successfully LogIn ....\nHey, MMIB.SHOWROV\nYour Phone Is : 01818500151\nYour Email Is : mazharul35-1798@diu.edu.bd","My Personal Info",JOptionPane.PLAIN_MESSAGE,fokla);
+                }
+               else if(userName.equals("Md Mazharul Islam Bhuiyan") && password.equals("1798"))
+                {
+                    JOptionPane.showMessageDialog(null,"You are Successfully Log In..... ");
+                     ImageIcon  fokla = new ImageIcon("guiter.PNG");
+           JOptionPane.showMessageDialog(null, "   Your Personal Info....\nName : Md Mazharul Islam Bhuiyan\nYour Phone Is : 01818500151\nYour Email Is : showrov11981@gmail.com","Personal Info.....",JOptionPane.PLAIN_MESSAGE,fokla);
+                }
+               else if(userName.equals("Afzal Ismail") && password.equals("123"))
+                {
+                    JOptionPane.showMessageDialog(null,"You are Successfully Log In..... ");
+                     ImageIcon  fokla = new ImageIcon("guiter.PNG");
+           JOptionPane.showMessageDialog(null, "   Your Personal Info....\nName : Afzal Ismail\nYour Phone Is : 01818500151\nYour Email Is : afzal35-1799@diu.edu.bd","Personal Info.....",JOptionPane.PLAIN_MESSAGE,fokla);
+                }
+               else if(userName.equals("Md Mehedi Hasan") && password.equals("123"))
+                {
+                    JOptionPane.showMessageDialog(null,"You are Successfully Log In..... ");
+                     ImageIcon  fokla = new ImageIcon("guiter.PNG");
+           JOptionPane.showMessageDialog(null, "   Your Personal Info....\nName : Mehedi Hasan\nYour Phone Is : 01818500151\nYour Email Is : mehedi35-1801@diu.edu.bd","Personal Info.....",JOptionPane.PLAIN_MESSAGE,fokla);
+                }
+               else if(userName.equals("Sabikun Nahar") && password.equals("123"))
+                {
+                    JOptionPane.showMessageDialog(null,"You are Successfully Log In..... ");
+                     ImageIcon  fokla = new ImageIcon("guiter.PNG");
+           JOptionPane.showMessageDialog(null, "   Your Personal Info....\nName : Sabikun Nahar\nYour Phone Is : 01818500151\nYour Email Is : sabikun35-1806@diu.edu.bd","Personal Info.....",JOptionPane.PLAIN_MESSAGE,fokla);
+                }
+                
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Invalid User Name or Password ");
+                } 
+                    
+             }
+             
+         });
+        
+        } 
+    
+    public static void main(String[] args) {
+       T40_LogIn_Frame frame = new T40_LogIn_Frame();
+       frame.setVisible(true);
+    }
+}
+
