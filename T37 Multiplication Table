@@ -1,0 +1,24 @@
+
+package java_Tutorial;
+
+import java.util.Scanner;
+
+public class T38_namta {
+    public static void main(String[] args) {
+        int n,i,m,j;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter 1st value : ");
+        m= input.nextInt();
+        System.out.println("Enter Last value : ");
+        n= input.nextInt();
+        for(i=m;i<=n;i++)
+        {
+            for (j=1; j<= 10; j++)
+            {
+               int mul=i*j;
+                System.out.println(i+"X"+j+"=" +mul);
+            }
+            System.out.println("\n\n");
+        }
+    }
+}
