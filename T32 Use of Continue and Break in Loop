@@ -1,0 +1,21 @@
+//Continue use kora hoy kono loop er moddhe kono statement skip kore baki kaj gulo korar jonno
+
+//Break use kora hoy loop er kaj off kore dewar jonno loop complete hoowar auge
+
+package java_Tutorial;
+
+public class T32_Break_And_Continue_In_Loop {
+    
+    public static void main(String[] args) {
+        for(int i=0;i<=300;i+=10){
+            if(i==10){
+                continue;// if we use in Continue in this statement its skip only this value
+            }
+            if(i>20){
+                break;
+            }
+// ekhane arekta bracket use korle only break er value print hobe
+            System.out.println(i+"."+"dont print for loop when value is 10 equal");
+        }
+    }
+}
