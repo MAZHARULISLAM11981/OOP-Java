@@ -1,0 +1,18 @@
+/* 1st Initialization part
+2nd while(Condition){
+3rd fghjk;
+4th increment/deciement
+*/
+package java_Tutorial;
+
+public class T29_WhileLoopDemo {
+    public static void main(String[] args) {
+        int i=0;
+        while(i<=20){
+            System.out.println(i+"."+"Bangladesh");
+            i+=2;
+        }//loop shesh e bracket er bairer part niye kaj hobe
+        System.out.println(" Your Loop End");
+    }
+    
+}
