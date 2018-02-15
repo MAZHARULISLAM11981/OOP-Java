@@ -1,0 +1,24 @@
+// Small and large number By Conditional operator
+package java_Tutorial;
+
+import java.util.Scanner;
+
+public class T25_Conditional_operator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num1,num2,large;
+        System.out.println("Enter 2 Number : ");
+        num1=input.nextInt();
+        num2=input.nextInt();
+        
+        large=(num1>num2) ? num1 : num2;
+        System.out.println("Large"+large);
+        
+        System.out.println("Enter 2 Number : ");
+        int  num3=input.nextInt();
+        int num4=input.nextInt();
+        
+        int small=( num3 < num4) ? num3 : num4;
+        System.out.println("Small : "+small);
+    }
+}
