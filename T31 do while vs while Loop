@@ -1,0 +1,26 @@
+// Condition false hooleo Initial value er jonno Do-While loop e 1 baar value exicute hoy
+// But While loop e 1st e initial value condition e check hoy tai kono value exicute hoyna
+package
+java_Tutorial;
+
+public class T31_While_vs_DoWhile {
+    public static void 
+        main(String[] args) {
+        int 
+                i=11;
+        while
+                (i<=10){
+            System.out.println(i+"."+"Bangladesh");
+            i+=2;
+        }
+        
+        int 
+                j=9;
+        do
+        {
+            System.out.println(j+"."+"Nationality");
+        }
+        while
+                (j<1);
+    }
+}
