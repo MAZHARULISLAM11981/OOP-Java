@@ -1,0 +1,15 @@
+
+package java_Tutorial;
+
+public class T28_ForLoop {
+    public static void main(String[] args) {
+        int i; 
+        for(i=10;i>=0;i--){
+        System.out.println(i+"."+"Bangladesh");// I use in sout for Address of BD
+    }
+        for(i=0;i<10;i=i+2)//i=i+2 this value incriment by 2 per displaying
+        {
+            System.out.println(i);
+        }
+}
+}
