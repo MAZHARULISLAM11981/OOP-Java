@@ -1,0 +1,17 @@
+// initialization....do stetment carring displaying method and incriment/decriment
+//then while(condition) loop carry yhe condition
+// while loop e 1st thekei kono kaj korbena condition false hoole 
+// do loop e false hooleo 1 baar display korbe 
+package java_Tutorial;
+
+public class T30_DoWhile_Loop {
+    public static void main(String[] args) {
+        int i=1;
+        do{
+            System.out.println(i+"."+"Bangladesh");
+            i++;
+        }
+        while(i<=10);
+    }
+    
+}
