@@ -1,0 +1,25 @@
+// switch-default;
+package java_Tutorial;
+
+import java.util.Scanner;
+
+public class T22{
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a;
+        System.out.println("Input any Number : ");
+        a=input.nextInt();
+        switch(a){
+            case 1:
+                System.out.println("one");
+                break;
+            case 2:
+                System.out.println("two");
+                break;
+           
+                default:
+                System.out.println("This Number Is Invalied");
+        }
+    }
+}
