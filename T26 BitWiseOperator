@@ -1,0 +1,26 @@
+
+package java_Tutorial;
+
+import java.util.Scanner;
+
+public class T26_BitwiseOperator {
+    public static void main(String[] args) {
+        int a;
+        int b;
+        int c;
+        Scanner input = new Scanner(System.in);
+        
+        a = input.nextInt();
+        b=input.nextInt();
+        
+        c=a&b;
+        System.out.println("&&&& = "+c);
+        
+        c=a|b;
+        System.out.println("|||| = "+c);
+        
+        c=a^b;
+        System.out.println("^^^ = "+c);
+    }
+}
+
