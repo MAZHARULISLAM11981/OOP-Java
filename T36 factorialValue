@@ -1,0 +1,20 @@
+
+package java_Tutorial;
+
+import java.util.Scanner;
+
+public class T36_Factorial {
+    public static void main(String[] args) {
+        int n,i,total=1;
+    Scanner input = new Scanner(System.in);
+        System.out.print("Enter the value which is use for factorial : ");
+    n=input.nextInt();
+    for(i=n;i>=1;i--)
+    {
+        total=total*i;
+        System.out.println(i+"!");
+    }
+        System.out.println("Total : "+total);
+    }
+    
+}
