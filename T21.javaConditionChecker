@@ -1,0 +1,33 @@
+//Condition Checking
+package java_Tutorial;
+
+import java.util.Scanner;
+
+public class T21 {
+    public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+        
+        char ch;
+    
+        System.out.print("Input Char = "); 
+        ch = input.next().charAt(0);
+        //IF show this condition any error check (ch==data) thats it right....???
+         if( ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U' || ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' )
+        {
+           System.out.println("Vowel");
+        }
+         //Unary And &&
+        else if(ch>='a' && ch<='z'){
+           System.out.println("Small Letter");
+       }
+        // Unary And &&
+       /*else if(ch>='A' && ch<='Z'){
+           System.out.println("capital Letter");
+       }*/
+        else
+        {
+            System.out.println("Consonent");
+        }
+    }
+}
+        
