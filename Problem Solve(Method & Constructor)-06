@@ -1,0 +1,60 @@
+
+package Bank;
+
+/**
+ *
+ * @author Showrov
+ */
+public class Account {
+    private String Name;
+    private String AccID;
+    private double balance;
+    
+    public Account(String N,String Acc,double B){
+        Name =N;
+        AccID =Acc;
+        balance =B;
+    }
+    public double deposite(double amount){
+         System.out.println("Your Balance After Deposit : ");
+        balance=balance+amount;
+        return balance;
+    }
+    public double withdraw(double amount){
+        System.out.println("Your Balance After WQithdraw : ");
+        balance=balance-amount;
+        return balance;
+    }
+    public void Display(){
+            System.out.println("Name : "+Name);
+            System.out.println("Acc No : "+AccID);
+            System.out.println("Your Balance after opening Account : "+balance);
+            System.out.println("Your Current Balance Is :\n "+balance);
+            
+        }
+  }
+    
+
+package Bank;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Account obj = new Account("Shakil","0018s",10000.00);
+        obj.Display();
+       
+       double deposite=obj.deposite(40000);
+        System.out.println(deposite);
+       double withdraw=obj.withdraw(40000);
+        System.out.println(withdraw);
+        System.out.println("\n");
+        
+        Account obj1 = new Account("sujon","0017s",10000.00);
+        obj1.Display();
+       
+       double deposite1=obj1.deposite(40000);
+        System.out.println(deposite);
+       double withdraw1=obj1.withdraw(40000);
+        System.out.println(withdraw);
+        }
+}
