@@ -1,0 +1,55 @@
+
+package Problem_Solving_02;
+
+import java.util.Scanner;
+
+public class Employee {
+    Scanner input = new Scanner(System.in);
+    String Name;
+    double salary;
+    
+    String Designation;
+    public Employee(String n,double s){
+        Name=n;
+        salary=s;
+    }
+public void Salary(){
+    System.out.print("Enter your Designation : ");
+    Designation = input.nextLine();
+    System.out.print("\n");
+    if(Designation.equals("Project Manager")){
+     salary = 50000;
+}
+else if(Designation.equals("Developer")){
+    salary = 30000;
+}
+}
+public void Display(){
+    System.out.println("Your Name Is : "+Name);
+    System.out.println("Your Salary Is : $"+salary);
+    System.out.println("You are a : "+Designation);
+}
+}
+
+
+package Problem_Solving_02;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String Name;
+        double salary;
+        
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter Your Name : ");
+         Name=input.nextLine();
+         System.out.println("\n");
+        System.out.print("Enter Yor Salary : ");
+        salary=input.nextDouble();
+        System.out.println("\n");
+        Employee Emp1=new Employee(Name,salary);
+        Emp1.Salary();
+        Emp1.Display();
+    }
+}
