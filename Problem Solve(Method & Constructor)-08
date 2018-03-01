@@ -1,0 +1,79 @@
+
+package Food;
+
+public class Burger0 {
+    int id;
+    String name;
+    Double unitPrice;
+    Double sellPrice;
+    int TotalFood;
+    Double dailyTotalSellAmount=0.0;
+    int soldItem=0;
+    public void setValue(int id, String n, Double up, Double sp, int tf){
+    this.id=id;// when we putted in same variavle in once another we use this.(variable name)
+    name=n;
+    unitPrice=up;
+    sellPrice=sp;
+    TotalFood=tf;
+    }
+    public void printInfo(){
+        System.out.println("Id:"+id+", Name: "+name);
+        System.out.println("dailyTotalSellAmount: "+dailyTotalSellAmount);
+        System.out.println("Remaining Burger: "+(TotalFood-soldItem));
+    }
+    
+    public void priceCalculation(int a){
+       dailyTotalSellAmount+=sellPrice*a;
+       soldItem=soldItem+a;
+    }
+    
+    public void profit(){
+      Double p = sellPrice-unitPrice;
+      Double benefit= p*soldItem;
+       System.out.println("profit: "+benefit);
+    }
+}
+
+package Food;
+
+import java.util.Scanner;
+public class Burger1 {
+
+
+    public static void main(String[] args) {
+      Burger0 f1=new Burger0();
+      f1.setValue(101, "Burger", 100.0, 120.0, 200);
+     
+      Scanner input = new Scanner(System.in);
+      System.out.print("Enter burger number: ");
+      
+      int bn=input.nextInt();
+      f1.priceCalculation(bn);
+      f1.printInfo();
+      f1.profit();
+      
+      int bm=input.nextInt();
+      f1.priceCalculation(bm);
+       f1.printInfo();
+       f1.profit();
+     
+      
+      Burger0 f2=new Burger0();
+      f2.setValue(1002, "Pizza", 120.0, 150.0, 1000);
+     
+      System.out.print("Enter Pizza number: ");
+      
+      int j=input.nextInt();
+      f2.priceCalculation(j);
+      f2.printInfo();
+      f2.profit();
+      
+      int k=input.nextInt();
+      f1.priceCalculation(k);
+       f1.printInfo();
+       f1.profit();
+     
+      
+    }
+    
+}
