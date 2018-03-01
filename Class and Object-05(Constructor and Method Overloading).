@@ -1,0 +1,50 @@
+
+package T82_OverLoadingConstructor;
+
+public class Teacher {
+    String Name,Gender;
+    int phone;
+    double salary;
+    Teacher(){
+        System.out.println("No Information");
+    }
+
+    Teacher(String Name, String Gender, int phone,double salary) {
+        this.Name = Name;
+        this.Gender = Gender;
+        this.phone = phone;
+        this.salary=salary;
+    }
+   
+    Teacher(String n,String g){
+      Name=n;
+      Gender=g;
+    }
+    Teacher(Double salary,int phone){
+        this.salary=salary;
+        this.phone=phone;
+    }
+    void Display(){
+        System.out.println("Name : "+Name);
+        System.out.println("Gender : "+Gender);
+        System.out.println("Salary : "+salary);
+        System.out.println("Phone : "+phone);
+    }
+}
+
+package T82_OverLoadingConstructor;
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher teacher1=new Teacher();
+         System.out.println("\n");
+        Teacher teacher2=new Teacher("MMIB.SHOWROV","MALE",1710771182,22800);
+        teacher2.Display();
+        System.out.println("\n");
+        Teacher teacher3=new Teacher("Mazharul","Male");
+        teacher3.Display();
+         System.out.println("\n");
+        Teacher teacher4=new Teacher(18900.,1984303226);
+        teacher4.Display();
+    }
+}
