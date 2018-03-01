@@ -1,0 +1,36 @@
+package T77_Class_And_Object;
+
+public class Teacher {
+    String Name,Email,Gender,Phone;
+}
+
+package T77_Class_And_Object;
+
+public class Main {
+    public static void main(String[] args) {
+       System.out.println("\n1.Teacher Information : ");
+       Teacher teacher1=new Teacher();
+       teacher1.Name= "MMIB SHOWROV";
+       teacher1.Gender= "Male";
+       teacher1.Email= "mazharul35-1798@diu.edu.bd";
+       teacher1.Phone="01818500151";
+       
+        System.out.println("Name : "+teacher1.Name);
+        System.out.println("Email : "+teacher1.Email);
+        System.out.println("Gender : "+teacher1.Gender);
+        System.out.println("Phone : "+teacher1.Phone);
+        System.out.println("\n\n2.Teacher Information :");
+        
+       Teacher teacher2=new Teacher();
+       teacher2.Name= "MD MAZHARUL ISLAM";
+       teacher2.Gender= "Male";
+       teacher2.Email= "showrov11981@gmail.com";
+       teacher2.Phone="01789768471";
+       
+        System.out.println("Name : "+teacher2.Name);
+        System.out.println("Email : "+teacher2.Email);
+        System.out.println("Gender : "+teacher2.Gender);
+        System.out.println("Phone : "+teacher2.Phone);
+    }
+    
+}
