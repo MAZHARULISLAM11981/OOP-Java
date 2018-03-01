@@ -1,0 +1,50 @@
+
+package CourseManagement;
+
+public class Course {
+    
+    String CourseCode;
+    String CourseName;
+    Double CourseCredit;
+    String CourseTeacher;
+    int WeeklyClass;
+    
+    public void setValue(String CourseCode,String CName,Double CCredit,String CTeacher,int WClass)
+    {
+        this.CourseCode=CourseCode;
+        CourseName=CName;
+        CourseCredit=CCredit;
+        CourseTeacher=CTeacher;
+        WeeklyClass=WClass;
+    }
+    
+    public void MontlyClass()
+    {
+        System.out.println("Monthly Class :"+WeeklyClass*4);
+    }
+    
+    public void YearlyClass()
+    {
+        System.out.println("Yearly Class :"+WeeklyClass*52);
+    }
+    
+    public void display()
+    {
+        System.out.println("Course Code:"+CourseCode+"\nCourse Name :"+CourseName+"\nCourse Credit :"+CourseCredit+"\nCourse Teacher: "+CourseTeacher);
+    }
+}
+
+
+package CourseManagement;
+
+public class CourseManagement {
+    public static void main(String[] args)
+    {
+        Course Algorithmclass;
+        Algorithmclass= new Course();
+        Algorithmclass.setValue("SWE 213", "Algorithm With Lab", 4.0, "Dr. Asraf Ali", 4);
+        Algorithmclass.display();
+        Algorithmclass.MontlyClass();
+        Algorithmclass.YearlyClass();
+    }
+}
