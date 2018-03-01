@@ -1,0 +1,41 @@
+
+//Default and Parameterised Constructor
+
+package T80_ConsTructor;
+
+public class Constructor {
+    
+    String Name,Gender,Qualification;
+    long Phone;
+    
+    Constructor(String n, String gen,String quali,long ph){
+        Name=n;
+        Gender=gen;
+        Qualification=quali;
+        Phone=ph;
+        
+    }
+    void Display(){
+        System.out.println("Name : "+Name);
+        System.out.println("Gender : "+Gender);
+        System.out.println("Qualification : "+Qualification);
+        System.out.println("Phone : "+Phone);
+        
+    }
+    
+}
+
+package T80_ConsTructor;
+
+public class Main {
+    public static void main(String[] args) {
+        Constructor teacher1=new Constructor("MMIB Showrov","Male","BSc In SWE",1818500151);
+        teacher1.Display();
+        
+        System.out.println("\n");
+        
+        Constructor teacher2=new Constructor("MD MAZHARUL ISLAM  BHUIYAN","Male","BSc In SWE",1818500151);
+        teacher1.Display();
+    }
+    
+}
