@@ -1,0 +1,38 @@
+
+package T78_Class_And_Object;
+
+public class Teacher {
+    String Name,Gender,Email;
+    long Phone;
+    
+    void Display(){
+         System.out.println("Name : "+Name);
+        System.out.println("Email : "+Email);
+        System.out.println("Gender : "+Gender);
+        System.out.println("Phone : "+Phone);
+    }
+}
+
+package T78_Class_And_Object;
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher teacher1 = new Teacher();
+        teacher1.Name="Md Mazharul Islam Bhuiyan";
+        teacher1.Gender="Male";
+        teacher1.Email="bhuiyanmdmazharulislam";
+        teacher1.Phone=1818500151;
+        teacher1.Display();
+        
+        System.out.println("\n");
+        
+        Teacher teacher2 = new Teacher();
+        teacher2.Name="Md Mazharul Islam Bhuiyan";
+        teacher2.Gender="Male";
+        teacher2.Email="bhuiyanmdmazharulislam";
+        teacher2.Phone=1818500151;
+        teacher2.Display();
+        
+    }
+    
+}
