@@ -1,0 +1,78 @@
+
+package Problem_Solving_04;
+import java.util.Scanner;
+public class Salesperson {
+    
+    Scanner input = new Scanner(System.in);
+    int id;
+    String Name;
+    double salary;
+    
+    int bonus;
+
+    
+public Salesperson(int id,String n,double s){
+this.id=id;
+Name=n;
+salary=s;
+ }
+
+public double calculatesalary(){
+    System.out.print("Monthly Salary : ");
+    return salary*30;
+}
+
+public void calculatebonus(){
+    int salesproducts;
+    System.out.print("Input your Total daily Sales : ");
+     salesproducts=input.nextInt();
+    if(salesproducts>100)
+    {
+       bonus= 500;
+    }
+    else if(salesproducts<100){
+       bonus = 0;
+    }
+}
+
+public void Display(){
+    System.out.println("ID : "+id);
+    System.out.println("Name : "+Name);
+    System.out.println("Daily Salary : "+salary);
+    System.out.println(calculatesalary());
+    System.out.println("calculate Bonus : "+bonus);
+}
+}
+
+
+package Problem_Solving_04;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+      
+        int id;
+        String na;
+        double DailyPaid;
+        
+        System.out.print("Enter Your Id : ");
+        id=input.nextInt();
+        System.out.println("\n");
+        /*
+        System.out.println("Enter Your Name : ");
+        na=input.nextLine();
+        System.out.println("\n");
+        */
+        System.out.print("Enter Your Daily Paid : ");
+        DailyPaid=input.nextDouble();
+        System.out.println("\n");
+        
+        Salesperson obj =new Salesperson(id,"Alim",DailyPaid);
+        
+        obj.calculatebonus();
+        obj.Display();
+        
+    }
+}
