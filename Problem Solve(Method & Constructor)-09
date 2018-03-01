@@ -1,0 +1,77 @@
+
+package Question_Solve;
+
+public class Employee {
+    int Id;
+    String name;
+    String Designation;
+    double salary;
+    double yearlysalary;
+    
+    public Employee(int Id, String n,String des){
+        this.Id=Id;
+        name=n;
+        Designation=des;
+    }
+    public void setsalary(){
+        if(Designation.equals("Manager"))
+        {
+            salary=20000;
+        }
+        else if(Designation.equals("Stuff"))
+        {
+            salary=10000;
+        }
+    }
+    public double yearlysalary(){
+        return 12*salary;
+    }
+    public double calculatebonus(){
+        if(salary==20000){
+            return (salary*.02);
+        }
+        else
+        {
+            return (salary*.05);
+        }
+    }
+    public double Totalyearlysalary(){
+       return yearlysalary()+calculatebonus();
+    }
+    public void Display(){
+        System.out.println("ID : "+Id);
+        System.out.println("Name : "+name);
+        System.out.println("Salary : "+salary);
+        System.out.println("Yearly Salary : "+yearlysalary());
+        System.out.println("Calculate Bonus : "+calculatebonus());
+        System.out.println("Total Salary : "+Totalyearlysalary());
+    }
+}
+
+
+package Question_Solve;
+
+
+public class Main {
+    public static void main(String[] args) {
+        
+        System.out.println("1st Employee : ");
+        
+        Employee Manager=new Employee(101,"MMIB","Manager");
+        Manager.yearlysalary();
+        Manager.setsalary();
+        Manager.Totalyearlysalary();
+        Manager.Display();
+        
+        System.out.println("\n");
+        
+        System.out.println("2nd Employee : ");
+        
+        Employee Stuff=new Employee(102,"Shakil","Stuff");
+        Stuff.yearlysalary();
+        Stuff.setsalary();
+        Manager.Totalyearlysalary();
+        Stuff.Display();
+        
+    }
+}
