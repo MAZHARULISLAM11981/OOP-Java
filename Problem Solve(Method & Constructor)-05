@@ -1,0 +1,66 @@
+
+package Problem_Solving_05;
+
+import java.util.Scanner;
+
+public class BDNCM_Team {
+    Scanner input = new Scanner(System.in);
+    
+    String Name;
+    int Age;
+    double PrizeMoney;
+    
+    double bonus;
+    double t;
+    int plays;
+    public BDNCM_Team(String n,int a, double tpm){
+        Name=n;
+        Age=a;
+        PrizeMoney=tpm;
+    }
+    
+public void CalculateTotalPrizeMoney(int p){
+    plays=p;
+
+    if(plays>=10) 
+    {
+        t = PrizeMoney*10;
+    }
+}
+public void Bonus(int match){   
+    if(match>10){
+     bonus = 1000;
+    }
+}
+public void Display(){
+    System.out.println("\n");
+    System.out.println("Name : "+Name);
+    System.out.println("Age : "+Age);
+    System.out.println("Prize Money : "+PrizeMoney);
+    System.out.println("Total Prize Money For Playing 10 Matches : "+t);
+    System.out.println("Your Bonus : "+bonus);
+}
+}
+
+
+package Problem_Solving_05;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String Name;
+        int Age;
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter Your Name : ");
+        Name=input.nextLine();
+        System.out.println("Enter Your Age : ");
+        Age=input.nextInt();
+        
+        BDNCM_Team player1=new BDNCM_Team(Name,Age,3000);
+        player1.CalculateTotalPrizeMoney(10);     
+        player1.Bonus(11);
+        player1.Display();
+    }
+}
