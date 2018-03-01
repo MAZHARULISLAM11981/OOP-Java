@@ -1,0 +1,106 @@
+/******************************************************************************
+Question:
+
+*1. Write an AirCondition class which has a double type private instance 
+*variable named Temperature. Write an Assignvalue and GetValue methods to set and 
+*get the value of Temperature. To set the Temperature considers these conditions: 
+*If, weather is warm, then Temperature is 18 or if the weather is Cold, then 
+*Temperature are 25. Call the methods from Main class.
+
+---------------------------------------------------------------------------
+
+2. Write an Employee class which have a variable named salary. Write two method,
+first (accessor) method will set/assign the value of salary and another method 
+(mutator) will get/show/display the value of salary. To set the salary consider
+these conditions: If,employee is Project Manager, then salary is 50000 taka or
+if the employee is Developer,then salary is 30000 taka. Call the methods from
+Main class.
+ 
+---------------------------------------------------------------------------
+
+*3. Suppose, you have been given a task to develop a program for a company name 
+*“Bangla Group”. In this company, there are two types of employee such as manager 
+*and stuff. Each Employee has attributes like id, name and designation. 
+*The salary structure of this company is, if the designation of employee is Manager,
+*then monthly salary is 20,000 taka and for Stuff the salary is 10,000 taka.
+*Write a method which will set the monthly salary of each employee according to
+*their designation.
+*Write a method which will calculate yearly salary of each employee.
+*Write a method will calculate the bonus of each employee. 20% bonus on salary for
+*manager and 5% bonus on salary for stuff.
+*Use a parameterized constructor to initialize the attributes of class.
+*Write a method to display all information regarding to each employee. 
+*Create object from main class and call all the methods. 
+
+-------------------------------------------------------------------------
+
+*4. Mr. Alim is a salesperson of ABC shop. He has attributes like id, name, and 
+*salary. He is paid 300 taka per day for his job. 			
+*•	Write a proper class with attributes. 
+*•	Use constructor for initializing the attributes.
+*•	Id, name and salary must be taken from user as input.
+*•	Write another method that will calculate and return the monthly salary of
+*Mr. Alim.
+*•	Write another method that will calculate bonus for Mr. Alim. The number 
+*of product that Mr. Alim sells every day is the parameter of the method. 
+*If Mr. Alim sales more than 100 products, then 500 taka bonus will be given
+*to him.
+*•Create a Main class with main method and take input from the user
+*in it and call all the methods created in the above class.
+
+-------------------------------------------------------------------------
+
+*5. Mr. Miraz is a Cricketer of Bangladesh National Cricket Team.
+*He has property/attributes like Name, Age and total Prize money. 
+*He is paid 3000 dollar as prize money for playing a single match. 	 	
+*Write a proper class with attributes and use constructor for initializing the
+*attributes.
+*Name and Age must be taken from user as input.
+*Write a method that will calculate and return the total prize money of 
+*Mr. Miraz if he will play 10 matches.
+*Write a method that will calculate bonus prize money for Mr. Miraz. 
+*The number of match that he plays is the parameter of the method. If Mr. Miraz 
+*plays more than 10 matches, then 1000 dollars bonus will be given to him.
+*Create a Main class with main method and take input from the user in it and call 
+*all the methods created in the above class
+******************************************************************************/
+
+
+package Problem_Solving_01;
+
+public class AirCondition {
+    private double Temperature;
+    
+    public void Getvalues(int temp){
+        Temperature=temp;
+        if(Temperature==18){
+            System.out.println("Weather is Warm");
+        }
+        else if(Temperature==25)
+        {
+            System.out.println("Weather is cold");
+        }
+    } 
+public void Display(){
+    System.out.println("Temperature is "+Temperature+" Degree Celcius");
+}
+}
+
+
+package Problem_Solving_01;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int temp;
+        temp=input.nextInt();
+        
+        AirCondition weather = new AirCondition();
+        
+        weather.Getvalues(temp);
+        weather.Display();
+    }
+}
+
